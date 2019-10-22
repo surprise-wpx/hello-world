@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('DEMO') {
       steps {
-        sh 'echo test'
+        svn 'svn://47.101.160.245/'
       }
     }
   }
