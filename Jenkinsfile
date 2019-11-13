@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('error') {
-      steps {
-        sleep 3
+      parallel {
+        stage('error') {
+          steps {
+            sleep 3
+          }
+        }
+        stage('fsfa') {
+          steps {
+            echo '333'
+          }
+        }
       }
     }
   }
