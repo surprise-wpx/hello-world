@@ -15,5 +15,19 @@ pipeline {
         }
       }
     }
+    stage('g1') {
+      parallel {
+        stage('g1') {
+          steps {
+            sleep 3
+          }
+        }
+        stage('g214') {
+          steps {
+            echo '4343'
+          }
+        }
+      }
+    }
   }
 }
