@@ -4,6 +4,7 @@ pipeline {
     stage('save') {
       steps {
         sleep 3
+        echo '666'
       }
     }
   }
